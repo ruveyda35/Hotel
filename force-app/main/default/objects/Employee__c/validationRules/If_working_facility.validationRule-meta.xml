@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>If_working_facility</fullName>
+    <active>true</active>
+    <errorConditionFormula>ISPICKVAL(Working_Field__c, &apos;Facilities&apos;) &amp;&amp;
+ ISBLANK( Working_Subfield__c )</errorConditionFormula>
+    <errorDisplayField>Working_Subfield__c</errorDisplayField>
+    <errorMessage>If the working field is &apos;Facility&apos;, this field should be 
+entered</errorMessage>
+</ValidationRule>

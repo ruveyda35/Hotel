@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>If_Currently_working_is_false</fullName>
+    <active>true</active>
+    <errorConditionFormula>Currently_Working__c = false
+&amp;&amp;
+  ISBLANK( Contract_End_Date__c )</errorConditionFormula>
+    <errorDisplayField>Contract_End_Date__c</errorDisplayField>
+    <errorMessage>If Currently working is false, then it is mandatory 
+to fill in</errorMessage>
+</ValidationRule>
