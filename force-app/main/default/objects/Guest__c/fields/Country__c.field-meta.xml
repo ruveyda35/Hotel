@@ -36,6 +36,11 @@
                 <default>false</default>
                 <label>Turkey</label>
             </value>
+            <value>
+                <fullName>Canada</fullName>
+                <default>false</default>
+                <label>Canada</label>
+            </value>
         </valueSetDefinition>
     </valueSet>
 </CustomField>

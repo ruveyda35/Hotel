@@ -1,0 +1,121 @@
+<template>
+    <!--Command +F yazinca aramak istedigin word uzerinden arayb-->
+    <div class="slds-col slds-size_1-of-1 slds-medium-size_1-of-1 slds-large-size_1-of-1" style="background-color: rgb(164, 142, 115);">
+        <img src="https://t3.ftcdn.net/jpg/05/75/22/58/360_F_575225818_PQ2ZPHFw51yCcmieutB5bT843nPAPzo3.jpg" alt="lawPicture">
+        <br><br>
+
+        <div style="background:white;padding:4px">
+            <div class="slds-m-around_medium">
+                <h1 style="font-weight: bold; color: #0070D2;">Fill the Form For Confirmation</h1>
+            </div>   
+        </div>
+        <br>
+        <div style="background:white;padding:4px">
+            <div class="slds-m-around_medium">
+                <!-- Input field with icon -->
+                <div class="slds-form-element">
+                    <!--Parent div element, with display:flex style -->
+                    <div class="aaa slds-form-element__control slds-input-icon" style="display: flex;position: relative;">
+                        <lightning-icon icon-name='standard:person_name' style="position: absolute;padding: 2px;" size="x-small" alternative-text="user" title='person_name'></lightning-icon>
+                        <input type="text"  name="firstname" id="inputField" style="padding-left: 50px; border: none;" class="slds-input" placeholder="First Name"  onchange={handleChange} />
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <br>
+        <br>
+        <div style="background:white;padding:4px">
+            <div class="slds-m-around_medium">
+                <!-- Input field with icon -->
+                <div class="slds-form-element">
+                    <!--Parent div element, with display:flex style -->
+                    <div class="aaa slds-form-element__control slds-input-icon" style="display: flex;position: relative;">
+                        <lightning-icon icon-name='standard:person_name' style="position: absolute;padding: 2px;" size="x-small" alternative-text="user" title='person_name'></lightning-icon>
+                        <input type="text"  name="lastname" id="inputField2" style="padding-left: 50px; border: none;" class="slds-input" placeholder="Last Name"  onchange={handleChange} />
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br>
+        <div style="background:white;padding:4px">
+            <div class="slds-m-around_medium">
+                <!-- Input field with icon -->
+                <div class="slds-form-element">
+                    <!--Parent div element, with display:flex style -->
+                    <div class="aaa slds-form-element__control slds-input-icon" style="display: flex;position: relative;">
+                        <lightning-icon icon-name="standard:account" style="position: absolute; padding: 2px;" size="x-small" alternative-text="company"></lightning-icon>
+                        <input type="text" name="company"  id="inputField3" style="padding-left: 50px; border: none;" class="slds-input" placeholder="Company Name"  onchange={handleChange} />
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <br>
+        <div style="background:white;padding:4px">
+            <div class="slds-m-around_medium">
+                <!-- Input field with icon -->
+                <!--https://www.salesforceicons.com/-->
+                <div class="slds-form-element">
+                    <!--Parent div element, with display:flex style -->
+                    <div class="aaa slds-form-element__control slds-input-icon" style="display: flex;position: relative;">
+                        <span style="position: absolute; padding: 5px;">
+                            <lightning-icon icon-name='action:call' alternative-text='call' style="position: absolute; padding: 2px;" size="x-small" title='call'></lightning-icon>
+                        </span>
+                        <input type="text"  name="phone" id="inputFieldPhone" style="padding-left: 50px; border: none;" class="slds-input" placeholder="Phone Number" onchange={handleChange} />
+                    </div>
+                </div>
+            </div>
+        </div>
+
+      <br>
+        <div style="background:white;padding:4px">
+            <div class="slds-m-around_medium">
+                <!-- Input field with icon -->
+                <div class="slds-form-element">
+                    <!--Parent div element, with display:flex style -->
+                    <div class="aaa slds-form-element__control slds-input-icon" style="display: flex;position: relative;">
+                        <lightning-icon icon-name='action:email' style="position: absolute; padding: 2px;" size="x-small" alternative-text="email" title='email'></lightning-icon>
+                        <input type="text" name="email" id="inputFieldEmail" style="padding-left: 50px; border: none;" class="slds-input" placeholder="Email Address" onchange={handleChange} />
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <br>
+        <div style="background:white;padding:4px; border: none;">
+            <div class="slds-m-around_medium">
+                <!-- Input field with icon -->
+                <div class="slds-form-element" >
+                    <div class="slds-form-element__control slds-combobox-icon" style="position: relative;">
+                       
+                        <lightning-icon icon-name='action:update_status' alternative-text='update_status' style="position: absolute; padding: 2px;" size='x-small' title='update_status'></lightning-icon>
+                        <lightning-combobox  
+                            class="slds-align-middle" 
+                            name="status"
+                            options={Status1}
+                            value={status}
+                            placeholder="Select a Status"
+                            style="padding-left: 30px; border: 1px solid white; box-shadow: none; border-radius: 0; border-color: white;"
+                            id="inputField4"
+                            onchange={handleChange}>
+                        </lightning-combobox>
+              
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <br>
+        <br>
+        <div style="text-align: center; margin-top: 20px;">
+            <lightning-button  
+                type="submit" 
+                variant="brand" 
+                style="padding: 8px 16px; margin:auto; background-color: #0070D2; color: white; border: none; border-radius: 4px; margin-bottom: 20px;"
+                label="Submit" 
+                onclick={handleClick}>
+            </lightning-button>
+        </div>
+    </div>
+</template>
