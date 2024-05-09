@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Rating_Star__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF( AnnualRevenue &gt;= 50000,
+IMAGE(&quot;https://www.pngfind.com/pngs/m/24-243662_free-icons-png-gold-star-icon-png-transparent.png&quot;, &quot;gold star&quot;, 25, 25), IMAGE(&quot;https://www.pngfind.com/pngs/m/12-127322_silver-star-silver-star-png-transparent-png.png&quot;, &quot;silver star&quot;, 25, 25))</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Rating Star</label>
+    <required>false</required>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>
